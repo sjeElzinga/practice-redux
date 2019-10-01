@@ -1,10 +1,9 @@
 import { combineReducers } from "redux";
 
-import helloReducer from "./hello";
-import todoApp from "./test";
+import todoReducer from "./todoReducer";
 
 const rootReducer = combineReducers({
-  hello: helloReducer
+  todos: todoReducer
 });
 
 export type AppState = ReturnType<typeof rootReducer>;

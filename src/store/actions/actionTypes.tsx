@@ -1,8 +1,6 @@
-export const ADD_TODO = "ADD_TODO";
+export const ADD_TODOO = "ADD_TODO";
 
-export function addTodo(text: string) {
-  return {
-    type: ADD_TODO,
-    text
-  };
+export interface AddTodoAction {
+  type: typeof ADD_TODOO;
+  payload: string;
 }

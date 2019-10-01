@@ -2,26 +2,17 @@ import React from "react";
 import { connect, MapStateToProps } from "react-redux";
 
 import { AppState } from "./store/reducers/rootReducer";
-import { IHello } from "./store/reducers/hello";
 
 import "./App.css";
 
-interface IProps {
-  hello: IHello;
-}
+import TodoPage from "./page/TodoPage";
 
-type Props = {} & IProps;
-
-const App: React.FC<Props> = props => {
-  console.log(props.hello);
-  return <div className="App">Hello</div>;
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <TodoPage />
+    </div>
+  );
 };
 
-const mapStateToProps = (state: AppState) => ({
-  hello: state.hello
-});
-
-export default connect(
-  mapStateToProps,
-  null
-)(App);
+export default App;
